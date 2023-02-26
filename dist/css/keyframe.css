@@ -129,47 +129,38 @@ a {
   display: inline-block;
 }
 
-.ad-banner {
-  width: 100%;
-  height: 100vh;
-  color: red;
-  position: fixed;
-  top: 0;
-  left: 0;
+.block {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.ad-banner .content {
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  min-width: 300px;
-  max-width: 95%;
-  position: relative;
-  z-index: 3;
-  font-weight: 800;
+.block.active {
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  transform: translate(80%);
 }
-.ad-banner .content::-moz-selection {
-  background: red;
-  color: yellow;
+
+@-webkit-keyframes move {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(80%);
+  }
 }
-.ad-banner .content::selection {
-  background: red;
-  color: yellow;
-}
-.ad-banner .content::first-line {
-  color: blue;
-}
-.ad-banner .content::first-letter {
-  font-size: 60px;
-}
-.ad-banner::before {
-  content: "";
-  background: rgba(0, 0, 0, 0.5411764706);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}/*# sourceMappingURL=css_pseudo_ad_banner.css.map */
+
+@keyframes move {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(80%);
+  }
+}/*# sourceMappingURL=keyframe.css.map */

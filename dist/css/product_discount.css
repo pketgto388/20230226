@@ -56,6 +56,9 @@ a {
 .form-control:focus::-moz-placeholder {
   color: rgb(204, 204, 204);
 }
+.form-control:focus:-ms-input-placeholder {
+  color: rgb(204, 204, 204);
+}
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -158,6 +161,7 @@ a {
   background-size: cover;
   width: 100%;
   height: 100%;
+  transition: 3s;
 }
 .product .product-image .discount-bar {
   background: #ff5858;

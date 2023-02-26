@@ -56,9 +56,6 @@ a {
 .form-control:focus::-moz-placeholder {
   color: rgb(204, 204, 204);
 }
-.form-control:focus:-ms-input-placeholder {
-  color: rgb(204, 204, 204);
-}
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -138,11 +135,13 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition-property: background;
+  transition-property: all;
   transition-duration: 2s;
-  transition-delay: 1s;
+  /*transition-delay: 1s;*/
+  transition-timing-function: ease;
 }
 .block:hover {
   background: #1d4fb9;
   font-size: 30px;
+  width: 1000px;
 }/*# sourceMappingURL=transition.css.map */
